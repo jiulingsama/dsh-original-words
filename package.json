@@ -1,0 +1,38 @@
+{
+  "name": "dsh-original-words",
+  "version": "1.0.0",
+  "description": "原话存档器：把用户每轮发出的原文逐字追加到 原话/<会话名>/YYYY-MM-DD.md，不摘要、不判断重要性、不掺任何注入内容",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "slots"
+      ],
+      "external": [
+        "react"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jiulingsama/dsh-original-words.git"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "archive",
+    "original-words"
+  ]
+}

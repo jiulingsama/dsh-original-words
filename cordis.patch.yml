@@ -1,0 +1,4 @@
+- insert:
+    - id: dsh-original-words
+      name: dsh-original-words
+      config: {}
